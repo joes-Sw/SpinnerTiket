@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="95dp"
+        android:text="Pemesanan"
+        android:layout_centerHorizontal="true"
+        android:textSize="23sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:text="Tiket Kereta"
+        android:layout_centerHorizontal="true"
+        android:textSize="23sp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:id="@+id/namaPemesanContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text2"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/rounded_background"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/iconNamaPemesan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_person_24" />
+
+        <EditText
+            android:id="@+id/etNamaPemesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/iconNamaPemesan"
+            android:layout_marginStart="12dp"
+            android:hint="Nama Pemesan"
+            android:background="@android:color/transparent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/jamKeberangkatanContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/namaPemesanContainer"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/rounded_background"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/iconJamKeberangkatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/clock" />
+
+        <TextView
+            android:id="@+id/etJamKeberangkatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/iconJamKeberangkatan"
+            android:layout_marginStart="12dp"
+            android:hint="Jam Keberangkatan"
+            android:background="@android:color/transparent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tanggalKeberangkatanContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/jamKeberangkatanContainer"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/rounded_background"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/iconTanggalKeberangkatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/date" />
+
+        <TextView
+            android:id="@+id/etTanggalKeberangkatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/iconTanggalKeberangkatan"
+            android:layout_marginStart="12dp"
+            android:hint="Pilih Tanggal Keberangkatan"
+            android:background="@android:color/transparent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tujuanContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tanggalKeberangkatanContainer"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/rounded_background"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/iconTujuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tujuan" />
+
+        <Spinner
+            android:id="@+id/spinnerTujuan"
+            android:layout_width="match_parent"
+            android:hint="Tujuan"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/iconTujuan"
+            android:layout_marginStart="12dp"
+            android:background="@android:color/transparent" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_show_custom_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_below="@+id/tujuanContainer"
+        android:text="Pesan Tiket"
+        android:backgroundTint="@color/blue"/>
+
+
+</RelativeLayout>
